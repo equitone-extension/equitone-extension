@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <img src="icons/logo1.png" width="250" height="127" id="logo" class="logo"/>
+    <p class="msgTxt">Thank you for standing with us in the pursuit of equality. Together, we are not just dreaming of a better world also we are building it, hand in hand.</p> 
+        <p class="msgTxt2">With deep gratitude, EquiTone.</p>
+    <div class="container">
+        <div class="tabs-container">
+            <button class="tab active" data-tab="tab1">
+                <i class="fa-solid fa-object-group"></i>
+                <span class="tab-text">Select Text</span>
+            </button>
+            <button class="tab" data-tab="tab3">
+                <i class="fas fa-cogs"></i>
+                <span class="tab-text">Settings</span>
+            </button>
+        </div>
+        <div class="content">
+            <div id="tab1" class="tab-content active">
+                <br>
+                <br>
+                <p class="underlined-text">Text Input</p>
+                <textarea id="selectedText" placeholder="No text selected"></textarea>
+                <br>
+                <br>
+                <p class="underlined-text">Response</p>
+                <div id="myModal" class="modal">
+                    <img id="loadingGif" class="loadingGif" src="icons/loading.gif">
+                </div>
+                <div id="outputText" style="display: none;"></div>
+                <br>
+                <div id="imgText" style="display: none;"></div>
+                <div id="priorityImageContainer" class="priority-image-container" style="display: none;">
+                    <img id="priorityImage" alt="Priority Level" />
+                </div>
+                <br>
+                <div id="probSideText" style="display: none;"></div>
+                <br>
+                <div id="suggestionText" style="display: none;"></div>
+                <br>
+                <br>
+                <button id="analyseButton" disabled>Analyse Selected Input</button>
+            </div>
+            <div id="tab3" class="tab-content">
+                <br>
+                <p>Please enter your API key.</p>
+                <input type="password" id="apiKey" placeholder="Enter API key here" />
+                <button id="saveApiKey" class="saveApiKey">Save API Key</button>
+                <button id="deleteApiKey" class="saveApiKey" style="display: none;">Delete API Key</button>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

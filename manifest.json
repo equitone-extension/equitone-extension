@@ -1,0 +1,37 @@
+{
+    "author": "EquiTone",
+    "name": "EquiTone",
+    "description": "Equitone aims to transform communication by detecting and eliminating gender bias, paving the way for a more equal and inclusive society.",
+    "manifest_version": 3,
+    "version": "1.0",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "128": "icons/2C.png"
+      }
+    },
+    "icons": {
+      "128": "icons/2C.png"
+    },
+    "permissions": [
+      "storage",
+      "contextMenus",
+      "notifications",
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": [
+          "popup.js"
+        ]
+      }
+    ]
+  }
